@@ -70,9 +70,14 @@
                 <div class="col-lg">
                     <h1 class="position-relative bottom-30px">ALIGN</h1>
                     <div class="box">
-                        <textarea class="detailp1" contenteditable="true">66% of people (73% of Millennials) are willing to pay more for products and services from companies committed to positive social and environmental impact.</textarea>
+                        <p class="detailp" id="text1">66% of people (73% of Millennials) are willing to pay more for products and services from companies committed to positive social and environmental impact.</p>
+                        <textarea name="temp" id="textarea" cols="30" rows="10" style="display: none;"></textarea>
+                        
+                        <div class="d-flex flex-row justify-content-between">
                         <a href="#" class="btn btn-light rounded-pill position-relative bottom-0" id="btn-align">LEARN MORE</a>
-                        <a href="#" class="btn btn-light id="btn-align">edit</a>
+                        <button id="edit-btn" onclick="textAreaActivate()" style="width: 40px;">EDIT</button>
+                        <button id="save-btn" onclick="setValue()" style="display: none; width: 40px;">SAVE</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg">
@@ -187,13 +192,21 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.1417381102938!2d110.37193787502858!3d-7.774791492244703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a584a6eaf7cbb%3A0x294cd98559dc9c8c!2sSekolah%20Vokasi%20UGM!5e0!3m2!1sid!2sid!4v1683468137864!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="col-lg">
-                    <form class="d-grid gap-3" action="#">
-                        <div><input type="text" name="namadepan" placeholder="Name"></div>
-                        <div><input type="text" name="email" placeholder="Email"></div>
-                        <div><textarea style="border-radius: 4px; padding: 0.5rem;" name="coment" id="" cols="66" rows="6" placeholder="Write your message here..."></textarea></div>
-                        <div><a href="#" class="btn btn-light" id="btn-send">SEND </a></div>
-                    </form>
-
+                    <div  class="row d-flex flex-row justify-content-between">
+                        <form class="d-grid gap-3" action="#" id="myForm">
+                            <div><input type="text" id="formNama" name="namadepan" placeholder="Name"></div>
+                            <div><input type="text" id="formEmail" name="email" placeholder="Email"></div>
+                            <div><textarea style="border-radius: 4px; padding: 0.5rem;" name="coment" id="formComment" cols="66" rows="6" placeholder="Write your message here..."></textarea></div>
+                            <div><button class="btn btn-light" id="btn-send">SEND</button></div>
+                        </form>
+                        </div>
+                        <div class="col-lg">
+                            <br>
+                            <br>
+                            <span id="output-komentar" style="font-style: italic;"></span>
+                            <p id="output-form"></p>
+                        </div>                        
+                    </div>
                 </div>
             </div>
 
